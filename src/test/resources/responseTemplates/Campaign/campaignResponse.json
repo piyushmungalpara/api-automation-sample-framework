@@ -1,0 +1,22 @@
+{
+  "data": {
+    "Campaign": {
+      "id": 100804,
+      "name": "",
+      "budget_type": "impression",
+      "advertiser_id": 100246,
+      "viewability_standard_provider": "",
+      "start_date": "",
+      "end_date": "",
+      "lifetime_budget_revenue": null,
+      "lifetime_budget_imps": null,
+      "updatedAt": "",
+      "createdAt": "",
+      "state": "",
+      "xandr_campaign_id": null,
+      "xandr_update_status": null,
+      "xandr_budget_interval_id": null,
+      "user_id": null
+    }
+  }
+}

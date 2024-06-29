@@ -1,0 +1,82 @@
+{
+  "MIDPOINT": {
+    "event_id": "3",
+    "event_url": "https://developers.google.com/interactive-media-ads/docs/sdks/html5/vastinspector"
+  },
+  "CREATIVEVIEW": {
+    "event_id": "1",
+    "event_url": "https://developers.google.com/interactive-media-ads/docs/sdks/html5/vastinspector"
+  },
+  "FIRSTQUARTILE": {
+    "event_id": "4",
+    "event_url": "https://developers.google.com/interactive-media-ads/docs/sdks/html5/vastinspector"
+  },
+  "START": {
+    "event_id": "2",
+    "event_url": "https://developers.google.com/interactive-media-ads/docs/sdks/html5/vastinspector"
+  },
+  "THIRDQUARITLE": {
+    "event_id": "5",
+    "event_url": "https://developers.google.com/interactive-media-ads/docs/sdks/html5/vastinspector"
+  },
+  "COMPLETE": {
+    "event_id": "6",
+    "event_url": "https://developers.google.com/interactive-media-ads/docs/sdks/html5/vastinspector"
+  },
+  "MUTE": {
+    "event_id": "7",
+    "event_url": "https://developers.google.com/interactive-media-ads/docs/sdks/html5/vastinspector"
+  },
+  "UNMUTE": {
+    "event_id": "8",
+    "event_url": "https://developers.google.com/interactive-media-ads/docs/sdks/html5/vastinspector"
+  },
+  "PAUSE": {
+    "event_id": "9",
+    "event_url": "https://developers.google.com/interactive-media-ads/docs/sdks/html5/vastinspector"
+  },
+  "REWIND": {
+    "event_id": "10",
+    "event_url": "https://developers.google.com/interactive-media-ads/docs/sdks/html5/vastinspector"
+  },
+  "RESUME": {
+    "event_id": "11",
+    "event_url": "https://developers.google.com/interactive-media-ads/docs/sdks/html5/vastinspector"
+  },
+  "FULLSCREEN": {
+    "event_id": "12",
+    "event_url": "https://developers.google.com/interactive-media-ads/docs/sdks/html5/vastinspector"
+  },
+  "EXPAND": {
+    "event_id": "13",
+    "event_url": "https://developers.google.com/interactive-media-ads/docs/sdks/html5/vastinspector"
+  },
+  "COLLAPSE": {
+    "event_id": "14",
+    "event_url": "https://developers.google.com/interactive-media-ads/docs/sdks/html5/vastinspector"
+  },
+  "ACCEPTINVITATION": {
+    "event_id": "15",
+    "event_url": "https://developers.google.com/interactive-media-ads/docs/sdks/html5/vastinspector"
+  },
+  "CLOSE": {
+    "event_id": "16",
+    "event_url": "https://developers.google.com/interactive-media-ads/docs/sdks/html5/vastinspector"
+  },
+  "CLICKTHROUGH": {
+    "event_id": "17",
+    "event_url": "https://developers.google.com/interactive-media-ads/docs/sdks/html5/vastinspector"
+  },
+  "ERROR": {
+    "event_id": "19",
+    "event_url": "https://developers.google.com/interactive-media-ads/docs/sdks/html5/vastinspector"
+  },
+  "CLICKTRACKING": {
+    "event_id": "20",
+    "event_url": "https://developers.google.com/interactive-media-ads/docs/sdks/html5/vastinspector"
+  },
+  "IMPRESSION": {
+    "event_id": "18",
+    "event_url": "https://developers.google.com/interactive-media-ads/docs/sdks/html5/vastinspector"
+  }
+}

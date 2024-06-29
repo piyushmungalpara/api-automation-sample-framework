@@ -1,0 +1,17 @@
+{
+  "data": {
+    "BudgetInterval": {
+      "id": 816,
+      "start_date": "",
+      "end_date": "",
+      "lifetime_budget_revenue": null,
+      "lifetime_budget_imps": null,
+      "ad_unit_id": 100816,
+      "updatedAt": "",
+      "createdAt": "",
+      "xandr_budget_interval_id": null,
+      "xandr_update_status": false,
+      "user_id": null
+    }
+  }
+}

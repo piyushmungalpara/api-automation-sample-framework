@@ -1,0 +1,18 @@
+{
+  "data": {
+    "creatives": {
+      "id": 100765,
+      "name": "",
+      "advertiser_id": 100246,
+      "ad_type": "video",
+      "is_third_party_tag": false,
+      "ad_tag_type": "",
+      "is_non_linear": false,
+      "updatedAt": "",
+      "createdAt": "",
+      "ad_tag_url": null,
+      "third_party_url": null,
+      "user_id": null
+    }
+  }
+}

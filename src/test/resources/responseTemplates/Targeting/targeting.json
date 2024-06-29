@@ -1,0 +1,40 @@
+{
+  "data": {
+    "profile": {
+      "id": 689,
+      "line_item_id": 100879,
+      "country_action": "",
+      "dma_action": null,
+      "region_action": null,
+      "city_action": null,
+      "language_action": null,
+      "device_type_action": null,
+      "os_action": null,
+      "browser_action": null,
+      "inventory_list_action": null,
+      "segment_action": null,
+      "seller_network_action": null,
+      "xandr_profile_id": null,
+      "xandr_update_status": false,
+      "user_id": null,
+      "createdAt": "",
+      "updatedAt": "",
+      "profile_cities": [],
+      "profile_countries": [],
+      "profile_regions": [],
+      "profile_dmas": [],
+      "profile_languages": [],
+      "profile_browsers": [],
+      "profile_os_types": [],
+      "profile_device_types": [],
+      "profile_player_sizes": [],
+      "profile_visibility_types": [],
+      "daypart_targets": [],
+      "profile_segments": [],
+      "profile_seller_networks": [],
+      "profile_inventory_lists": [],
+      "profile_zip_code_files": []
+    },
+    "error": []
+  }
+}

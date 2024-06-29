@@ -1,0 +1,281 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+		 xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<groupId>oil-rig-api-test-suite</groupId>
+	<artifactId>oil-rig-api-test-suite</artifactId>
+	<version>1.0-SNAPSHOT</version>
+	<modelVersion>4.0.0</modelVersion>
+	<name>oil-rig-api</name>
+	<description>Oil-rig API validation for Overdrive</description>
+	<properties>
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+		<serenity.core.version>2.0.30</serenity.core.version>
+		<serenity.junit.version>2.0.30</serenity.junit.version>
+		<serenity.cucumber.version>1.9.22</serenity.cucumber.version>
+		<serenity.maven.version>1.5.8</serenity.maven.version>
+		<webdriver.driver>chrome</webdriver.driver>
+		<webdriver.remote.url>http://dominicbennett1:sCMojDLRzBbx3xgBDCNH@hub-cloud.browserstack.com/wd/hub</webdriver.remote.url>
+		<bs.version>0.4</bs.version>
+		<browserstack.local.version></browserstack.local.version>
+		<log4j.version>1.2.17</log4j.version>
+		<slf4j.version>1.6.1</slf4j.version>
+		<junit.version>4.11</junit.version>
+		<assert.version>1.7.0</assert.version>
+		<gson.version>2.8.5</gson.version>
+		<serenity.core.version>2.0.33</serenity.core.version>
+		<browserstack.local>1.0.3</browserstack.local>
+		<maven.compiler.version>3.2</maven.compiler.version>
+		<maven.failsafe.version>2.21.0</maven.failsafe.version>
+		<serenity.emailer.version>2.0.7</serenity.emailer.version>
+	</properties>
+
+	<dependencies>
+		<dependency>
+			<groupId>log4j</groupId>
+			<artifactId>log4j</artifactId>
+			<version>${log4j.version}</version>
+		</dependency>
+
+		<dependency>
+			<groupId>org.apache.logging.log4j</groupId>
+			<artifactId>log4j-api</artifactId>
+			<version>2.1</version>
+		</dependency>
+
+		<dependency>
+			<groupId>org.apache.logging.log4j</groupId>
+			<artifactId>log4j-core</artifactId>
+			<version>2.1</version>
+		</dependency>
+
+		<dependency>
+			<groupId>org.ini4j</groupId>
+			<artifactId>ini4j</artifactId>
+			<version>0.5.4</version>
+		</dependency>
+
+		<!-- JSON Parsing Dependencies -->
+		<dependency>
+			<groupId>com.google.code.gson</groupId>
+			<artifactId>gson</artifactId>
+			<version>${gson.version}</version>
+		</dependency>
+
+		<dependency>
+			<groupId>net.serenity-bdd</groupId>
+			<artifactId>serenity-core</artifactId>
+			<version>${serenity.core.version}</version>
+		</dependency>
+
+		<dependency>
+			<groupId>net.serenity-bdd</groupId>
+			<artifactId>serenity-junit</artifactId>
+			<version>${serenity.junit.version}</version>
+		</dependency>
+
+		<dependency>
+			<groupId>net.serenity-bdd</groupId>
+			<artifactId>serenity-cucumber</artifactId>
+			<version>${serenity.cucumber.version}</version>
+		</dependency>
+
+		<dependency>
+			<groupId>net.serenity-bdd</groupId>
+			<artifactId>serenity-rest-assured</artifactId>
+			<version>${serenity.core.version}</version>
+		</dependency>
+
+		<dependency>
+			<groupId>org.slf4j</groupId>
+			<artifactId>slf4j-simple</artifactId>
+			<version>${slf4j.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>junit</groupId>
+			<artifactId>junit</artifactId>
+			<version>${junit.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>org.assertj</groupId>
+			<artifactId>assertj-core</artifactId>
+			<version>${assert.version}</version>
+			<scope>test</scope>
+		</dependency>
+
+		<!-- BrowserStack Dependency -->
+		<dependency>
+			<groupId>com.browserstack</groupId>
+			<artifactId>automate-client-java</artifactId>
+			<version>${bs.version}</version>
+		</dependency>
+
+		<!-- https://mvnrepository.com/artifact/com.browserstack/browserstack-local-java -->
+		<dependency>
+			<groupId>com.browserstack</groupId>
+			<artifactId>browserstack-local-java</artifactId>
+			<version>${browserstack.local}</version>
+		</dependency>
+	</dependencies>
+	<build>
+		<plugins>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-compiler-plugin</artifactId>
+				<version>${maven.compiler.version}</version>
+				<configuration>
+					<source>1.8</source>
+					<target>1.8</target>
+				</configuration>
+			</plugin>
+
+			<plugin>
+				<groupId>com.trivago.rta</groupId>
+				<artifactId>cluecumber-report-plugin</artifactId>
+				<version>2.3.4</version>
+				<executions>
+					<execution>
+						<id>report</id>
+						<phase>post-integration-test</phase>
+						<goals>
+							<goal>reporting</goal>
+						</goals>
+					</execution>
+				</executions>
+
+				<configuration>
+					<sourceJsonReportDirectory>${project.build.directory}/cucumber-report</sourceJsonReportDirectory>
+					<generatedHtmlReportDirectory>${project.build.directory}/generated-report</generatedHtmlReportDirectory>
+					<systemPropertyVariables>
+						<buildnumber>${buildnumber.value}</buildnumber>
+						<TestLinkTestPlan>${TestLinkTestPlan}</TestLinkTestPlan>
+						<TestLinkTestBuild>${TestLinkTestBuild}</TestLinkTestBuild>
+					</systemPropertyVariables>
+					<customParameters>
+						<ProjectName>Biddr360</ProjectName>
+						<Trageted_URL>https://control-staging.biddrconnect.com/</Trageted_URL>
+						<BrowserStackBuildName>${buildnumber}</BrowserStackBuildName>
+						<TestPlan>${TestLinkTestPlan}</TestPlan>
+						<TestBuild>${TestLinkTestBuild}</TestBuild>
+						<!-- <_Text>BrowserStackBuildName:${buildnumber}</_Text> -->
+					</customParameters>
+					<failScenariosOnPendingOrUndefinedSteps>true</failScenariosOnPendingOrUndefinedSteps>
+					<expandBeforeAfterHooks>true</expandBeforeAfterHooks>
+					<expandStepHooks>true</expandStepHooks>
+					<expandDocStrings>true</expandDocStrings>
+					<customPageTitle>Biddr360 Report</customPageTitle>
+				</configuration>
+
+			</plugin>
+
+			<!-- Don't run any tests during the unit test phase -->
+			<plugin>
+				<artifactId>maven-surefire-plugin</artifactId>
+				<configuration>
+					<skip>true</skip>
+				</configuration>
+			</plugin>
+			<plugin>
+				<groupId>net.serenity-bdd.maven.plugins</groupId>
+				<artifactId>serenity-maven-plugin</artifactId>
+				<version>${serenity.maven.version}</version>
+				<executions>
+					<execution>
+						<id>serenity-reports</id>
+						<phase>post-integration-test</phase>
+						<goals>
+							<goal>aggregate</goal>
+						</goals>
+					</execution>
+				</executions>
+				<dependencies>
+					<dependency>
+						<groupId>net.serenity-bdd</groupId>
+						<artifactId>serenity-core</artifactId>
+						<version>${serenity.core.version}</version>
+					</dependency>
+				</dependencies>
+			</plugin>
+		</plugins>
+	</build>
+	<profiles>
+		<profile>
+			<!-- maven profile to test individual feature -->
+			<id>TestLocal</id>
+			<activation>
+				<activeByDefault>true</activeByDefault>
+			</activation>
+			<build>
+				<plugins>
+					<plugin>
+						<artifactId>maven-failsafe-plugin</artifactId>
+						<version>${maven.failsafe.version}</version>
+						<configuration>
+							<includes>
+								<include>TestRunner.java</include>
+							</includes>
+							<rerunFailingTestsCount>1</rerunFailingTestsCount>
+							<forkCount>1</forkCount>
+							<reuseForks>true</reuseForks>
+							<skip>false</skip>
+						</configuration>
+						<executions>
+							<execution>
+								<goals>
+									<goal>integration-test</goal>
+									<goal>verify</goal>
+								</goals>
+							</execution>
+						</executions>
+					</plugin>
+				</plugins>
+			</build>
+		</profile>
+
+		<profile>
+			<id>generateemailreport</id>
+			<activation>
+				<activeByDefault>false</activeByDefault>
+			</activation>
+			<build>
+				<plugins>
+					<plugin>
+						<groupId>net.serenity-bdd.maven.plugins</groupId>
+						<artifactId>serenity-maven-plugin</artifactId>
+						<version>${serenity.core.version}</version>
+						<dependencies>
+							<dependency>
+								<groupId>net.serenity-bdd</groupId>
+								<artifactId>serenity-core</artifactId>
+								<version>${serenity.core.version}</version>
+							</dependency>
+							<dependency>
+								<groupId>net.serenity-bdd</groupId>
+								<artifactId>serenity-emailer</artifactId>
+								<version>${serenity.emailer.version}</version>
+							</dependency>
+						</dependencies>
+						<configuration>
+							<reports>email</reports>
+						</configuration>
+						<executions>
+							<execution>
+								<id>serenity-reports</id>
+								<phase>post-integration-test</phase>
+								<goals>
+									<goal>aggregate</goal>
+								</goals>
+							</execution>
+							<execution>
+								<id>serenity-reports-email</id>
+								<phase>post-integration-test</phase>
+								<goals>
+									<goal>aggregate</goal>
+								</goals>
+							</execution>
+						</executions>
+					</plugin>
+				</plugins>
+			</build>
+		</profile>
+	</profiles>
+</project>

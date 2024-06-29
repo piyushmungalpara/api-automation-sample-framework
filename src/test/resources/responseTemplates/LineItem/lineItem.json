@@ -1,0 +1,22 @@
+{
+  "data": {
+    "LineItem": {
+      "id": 100879,
+      "name": "",
+      "state": "",
+      "cpm": null,
+      "margin": null,
+      "ad_type": "video",
+      "campaign_id": 100804,
+      "updatedAt": "",
+      "createdAt": "",
+      "start_date": null,
+      "end_date": null,
+      "xandr_line_item_id": null,
+      "xandr_update_status": false,
+      "lifetime_budget_revenue": null,
+      "lifetime_budget_imps": null,
+      "user_id": null
+    }
+  }
+}

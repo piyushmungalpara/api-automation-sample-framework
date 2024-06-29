@@ -1,0 +1,14 @@
+{
+  "data": {
+    "advertiser": {
+      "id": 100246,
+      "name": "",
+      "state": "",
+      "updatedAt": "",
+      "createdAt": "",
+      "xandr_advertiser_id": null,
+      "xandr_update_status": false,
+      "user_id": null
+    }
+  }
+}
